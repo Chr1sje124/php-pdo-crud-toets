@@ -1,22 +1,17 @@
 <?php
 
-require('config.php');
-
-$dsn = "mysql:host='localhost';dbname='php-pdo-crud-toets';charset=UTF8";
+$dsn = "mysql:host=localhost;dbname=php-pdo-crud-toets;charset=UTF8";
 
 try {
-    $pdo = new PDO($dsn, $dbUser, $dbPass);
+    $pdo = new PDO($dsn, 'root', '');
     if ($pdo) {
-        return $pdo;
+        // return $pdo;
     } else {
         echo "Interne server-error";
     }
 } catch(PDOException $e) {
     $e->getMessage();
 }
-
-$sql = "USE php_pdo_crud_toets";
-$statement = $pdo->prepare($sql);
 
 $sql = "SELECT * FROM DureAuto ORDER BY Prijs desc";
 
@@ -34,7 +29,7 @@ foreach ($result as $info) {
               <td>$info->Prijs</td>
               <td>
                   <a href='delete.php?Id=$info->Id'>
-                      <img src='img/b_drop.png' alt='kruis'>
+                      <img src='b_drop.png' alt='kruis'>
                   </a>
               </td>
             </tr>";
