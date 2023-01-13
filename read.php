@@ -24,3 +24,19 @@ $statement = $pdo->prepare($sql);
 $statement->execute();
 
 $result = $statement->FetchAll(PDO::FETCH_OBJ);
+
+$rows = "";
+foreach ($result as $info) {
+  $rows .= "<tr>
+              <td>$info->Merk</td>
+              <td>$info->Model</td>
+              <td>$info->Topsnelheid</td>
+              <td>$info->Prijs</td>
+              <td>
+                  <a href='delete.php?Id=$info->Id'>
+                      <img src='img/b_drop.png' alt='kruis'>
+                  </a>
+              </td>
+            </tr>";
+}
+?>
