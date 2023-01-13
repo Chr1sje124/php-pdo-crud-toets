@@ -44,10 +44,43 @@ foreach ($result as $info) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style type="text/css">
+    
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(0, 5, 35);
+}
+
+table {
+    background-color: rgb(25, 0, 63);
+    border-collapse: collapse;
+    width: 40rem;
+}
+
+thead {
+    font-size: 1.4rem;
+}
+
+th {
+    padding: .6rem;
+    color: rgb(161, 161, 144);
+    font-weight: bold;
+}
+
+td {
+    padding: .6rem;
+    color: rgb(161, 161, 144);
+    font-size: 1rem;
+}
+
+h3 {
+    color: white;
+}
+</style>
 <body>
     <h3>Dure Autos</h3>
-    <br>
-    <br>
     <table border = 1>
         <thead>
             <th>Merk</th>
