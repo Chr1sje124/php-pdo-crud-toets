@@ -22,9 +22,13 @@ $statement->bindValue(':Id', $_GET['Id'], PDO::PARAM_INT);
 $result = $statement->execute();
 
 if ($result) {
+    echo "<body style='background-color:rgb(0, 5, 35)'>";
+    echo "<h1 style='color: white'>";
     echo "Het record is succesvol verwijderd";
     header('Refresh:1; url=read.php');
 } else {
+    echo "<body style='background-color:rgb(0, 5, 35)'>";
+    echo "<h1 style='color: white'>";
     echo "Het record is niet verwijderd";
     header('Refresh:1; url=read.php');
 }

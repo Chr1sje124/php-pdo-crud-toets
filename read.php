@@ -29,7 +29,7 @@ foreach ($result as $info) {
               <td>$info->Prijs</td>
               <td>
                   <a href='delete.php?Id=$info->Id'>
-                      <img src='b_drop.png' alt='kruis'>
+                      <img src='img/b_drop.png' alt='kruis'>
                   </a>
               </td>
             </tr>";
